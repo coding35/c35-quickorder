@@ -1,5 +1,5 @@
-import { QuickOrderService } from '../src/core/service/quickorder.service';
-import { CartItemModel } from '../src/core/model/cart-item.model';
+import {QuickOrderService} from '../src/core/service/quickorder.service';
+import {CartItemModel} from '../src/core/model/cart-item.model';
 
 describe('update quantity', () => {
   const instance = new QuickOrderService();
@@ -20,10 +20,10 @@ describe('update quantity', () => {
 });
 
 describe('update quantity', () => {
-    it('should set quantity to 1 if zero or negative quantity detected', () => {
-      const instance = new QuickOrderService();
-      instance.AddToCart(new CartItemModel(1, 'test', 10, 3, 'test.jpg'));
-      instance.UpdateQuantity(instance.GetItem(1), -3);
-      expect(instance.GetItem(1).quantity).toBe(1);
-    });
+  it('should set quantity to 1 if zero or negative quantity detected', () => {
+    const instance = new QuickOrderService();
+    instance.AddToCart(new CartItemModel(1, 'test', 10, 3, 'test.jpg'));
+    instance.UpdateQuantity(instance.GetItem(1), -3);
+    expect(instance.GetItem(1).quantity).toBe(1);
   });
+});

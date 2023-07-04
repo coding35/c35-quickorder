@@ -1,6 +1,5 @@
-
-import { CartItemModel } from '../src/core/model/cart-item.model';
-import { QuickOrderService } from '../src/core/service/quickorder.service';
+import {CartItemModel} from '../src/core/model/cart-item.model';
+import {QuickOrderService} from '../src/core/service/quickorder.service';
 
 describe('add item to cart', () => {
   it('should add item to cart', () => {

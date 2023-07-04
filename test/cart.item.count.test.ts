@@ -1,13 +1,12 @@
-
-import { QuickOrderService } from '../src/core/service/quickorder.service';
-import { CartItemModel } from '../src/core/model/cart-item.model';
+import {QuickOrderService} from '../src/core/service/quickorder.service';
+import {CartItemModel} from '../src/core/model/cart-item.model';
 
 const instance = new QuickOrderService();
 
 beforeEach(() => {
-    for (let i = 0; i < 10; i++) {
-        instance.AddToCart(new CartItemModel(i, 'test', 10, 1, 'test.jpg'));
-    }
+  for (let i = 0; i < 10; i++) {
+    instance.AddToCart(new CartItemModel(i, 'test', 10, 1, 'test.jpg'));
+  }
 });
 
 describe('get item cart count', () => {

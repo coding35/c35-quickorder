@@ -1,3 +1,3 @@
 export interface IQuickOrderObserver {
-    Update(): void;
+  Update(): void;
 }

@@ -1,4 +1,4 @@
-import { CartItemModelBase } from '../model/cart-item-base.model';
+import {CartItemModelBase} from '../model/cart-item-base.model';
 
 export interface IQuickOrder {
   SearchItem(keyword: string): any;

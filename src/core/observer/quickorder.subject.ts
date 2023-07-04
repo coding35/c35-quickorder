@@ -1,29 +1,28 @@
-import { IQuickOrderObserver } from "../interface/quickorder-observer.interface";
-import { IQuickOrderSubject } from "../interface/quickorder-subject.interface";
+import {IQuickOrderObserver} from '../interface/quickorder-observer.interface';
+import {IQuickOrderSubject} from '../interface/quickorder-subject.interface';
 
 export class QuickOrderSubject implements IQuickOrderSubject {
-    
-    observers: IQuickOrderObserver[] = [];
-    subject: SubjectState;
-    
-    constructor() {
-        this.subject = new SubjectState(null);
-        this.observers = [];
-    }
+  observers: IQuickOrderObserver[] = [];
+  subject: SubjectState;
 
-    Attach(observer: IQuickOrderObserver): void {
-        this.observers.push(observer);
-    }
+  constructor() {
+    this.subject = new SubjectState(null);
+    this.observers = [];
+  }
 
-    Detach(observer: IQuickOrderObserver): void {
-        this.observers = this.observers.filter(x => x !== observer);
-    }
+  Attach(observer: IQuickOrderObserver): void {
+    this.observers.push(observer);
+  }
 
-    Notify(): void {
-        this.observers.forEach(observer => observer.Update());
-    }
+  Detach(observer: IQuickOrderObserver): void {
+    this.observers = this.observers.filter(x => x !== observer);
+  }
+
+  Notify(): void {
+    this.observers.forEach(observer => observer.Update());
+  }
 }
 
 export class SubjectState {
-    constructor(public state: any) { }
+  constructor(public state: any) {}
 }

@@ -1,7 +1,7 @@
-import { IQuickOrderObserver } from "./quickorder-observer.interface";
+import {IQuickOrderObserver} from './quickorder-observer.interface';
 
 export interface IQuickOrderSubject {
-    Attach(observer: IQuickOrderObserver): void;
-    Detach(observer: IQuickOrderObserver): void;
-    Notify(): void;
+  Attach(observer: IQuickOrderObserver): void;
+  Detach(observer: IQuickOrderObserver): void;
+  Notify(): void;
 }

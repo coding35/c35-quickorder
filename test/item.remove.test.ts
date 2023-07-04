@@ -1,5 +1,5 @@
-import { QuickOrderService } from '../src/core/service/quickorder.service';
-import { CartItemModel } from '../src/core/model/cart-item.model';
+import {QuickOrderService} from '../src/core/service/quickorder.service';
+import {CartItemModel} from '../src/core/model/cart-item.model';
 
 const instance = new QuickOrderService();
 

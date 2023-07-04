@@ -1,9 +1,9 @@
-import { CartItemModelBase } from "./cart-item-base.model";
+import {CartItemModelBase} from './cart-item-base.model';
 
 export class NullCartItemModel extends CartItemModelBase {
-    public isNull: boolean = true;
+  public isNull = true;
 
-    constructor() {
-        super();
-    }
+  constructor() {
+    super();
+  }
 }
